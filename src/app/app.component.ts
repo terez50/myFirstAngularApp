@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from './model/hero';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myFirstAngularApp';
+  myHero: Hero = {
+    name: 'Magneto',
+    address: 'New York',
+    superpower: 'magnetic'
+  };
 }
