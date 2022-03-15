@@ -25,6 +25,7 @@ export class HeroService {
    }
 
    update(hero: Hero): Observable<any> {
+     console.log("service", hero);
      return this.http.put<Hero>(`${this.jsonUrl}/${hero.id}`, hero);
    }
 
