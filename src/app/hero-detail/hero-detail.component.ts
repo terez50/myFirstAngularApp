@@ -33,9 +33,14 @@ export class HeroDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // onSubmit(): void {
+  //   console.log("update", this.hService.update(this.hero)
+  //   .subscribe(hero => console.log(hero)));
+  // }
+
   onSubmit(): void {
-    console.log("update", this.hero);
-    this.hService.update(this.hero);
+    this.hService.update(this.hero)
+    .subscribe(hero => console.log("updated", hero));
   }
 
 }
